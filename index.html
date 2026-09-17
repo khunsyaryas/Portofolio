@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khunaify Syarief Yasah | Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-dark: #0ea5e9;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    header {
+      padding: 4rem 0 2rem;
+      text-align: center;
+      border-bottom: 1px solid #334155;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    header .title {
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    header .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    header .contact-info a { color: var(--muted); }
+    header .contact-info a:hover { color: var(--accent); }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #0f172a;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--accent-dark); text-decoration: none; }
+    section { padding: 3rem 0; }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+    .summary { font-size: 1.1rem; color: var(--muted); max-width: 800px; }
+    .experience-item, .education-item {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      border: 1px solid #334155;
+    }
+    .experience-item h3, .education-item h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+    .experience-item .company {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .experience-item .date {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+    .experience-item ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .experience-item ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+    .experience-item ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      background: var(--card);
+      padding: 1.25rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+    }
+    .skill-card h4 {
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .skill-card .level {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .skill-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid #334155;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      header .title { font-size: 1rem; }
+      section h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Khunaify Syarief Yasah</h1>
+      <p class="title">System Analyst | Software Consultant | IT Implementor | IT Support</p>
+      <div class="contact-info">
+        <span>📧 <a href="mailto:khunsyaryas@gmail.com">khunsyaryas@gmail.com</a></span>
+        <span>📱 <a href="tel:+6281585854704">+62 815-8585-4704</a></span>
+        <span>📍 Sukatani, Kab. Bekasi, Jawa Barat</span>
+        <span>🔗 <a href="https://linkedin.com/in/khunaify-syarief-yasah-2a369916a" target="_blank">LinkedIn</a></span>
+        <span>🌐 <a href="https://khunaifysyarief.my.canva.site/" target="_blank">Portfolio Canva</a></span>
+      </div>
+      <a href="resume.pdf" class="btn" download>Download CV</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="summary">
+        Versatile and results-driven IT Professional with over 13 years of progressive experience spanning Technical/HRIS Consulting, IT Support, and Operations Administration. Proven track record of designing and leading full-lifecycle system implementations—including POS, HRIS, ERP, WMS, AMS, and customized bespoke applications. Adept at aligning complex technical architectures with business workflows to drive operational efficiency, seamless system integration, and comprehensive end-user adoption.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="experience-item">
+        <h3>System Analyst (Acting IT Project Leader)</h3>
+        <p class="company">PT Wahana Informasi Indonesia (WADAS Group)</p>
+        <p class="date">06/2023 – 07/2025 · West Jakarta</p>
+        <ul>
+          <li>Led end-to-end implementation and customization of WMS, AMS, and bespoke software solutions.</li>
+          <li>Provided comprehensive training to clients on system applications, ensuring smooth adoption.</li>
+          <li>Authored detailed user manuals and technical support documentation.</li>
+          <li>Monitored system performance and conducted regular maintenance.</li>
+          <li>Conducted rigorous API testing and maintained technical documentation.</li>
+          <li>Provisioned and configured Linux (Ubuntu, CentOS) and Windows server environments.</li>
+          <li>Developed strategic business proposals and conducted gap analyses.</li>
+          <li>Engineered technical documentation: process flow diagrams, data mapping schemas, API specs.</li>
+          <li>Participated in UAT, provided post-deployment support, and gathered feedback.</li>
+          <li>Managed database operations and provided technical support using advanced SQL queries.</li>
+          <li>Supported Sales & Marketing by demonstrating systems to potential buyers.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>HRIS Consultant</h3>
+        <p class="company">PT BEST Dinamika Indonesia (Pro-Int Dinamika Group)</p>
+        <p class="date">12/2020 – 08/2021 · Cikarang</p>
+        <ul>
+          <li>Implemented and customized Human Resource Information Systems to meet client specifications.</li>
+          <li>Provided comprehensive training to clients on HRIS functionalities.</li>
+          <li>Developed detailed user manuals and support documentation.</li>
+          <li>Monitored system performance and conducted regular maintenance.</li>
+          <li>Supported Sales & Marketing by demonstrating HRIS to potential buyers.</li>
+          <li>Successfully implemented new HRIS software, resulting in a 90% increase in efficiency and accuracy.</li>
+          <li>Developed customized reporting dashboards for HR team, providing real-time data analysis.</li>
+          <li>Played key role in development and launch of employee self-service portal, reducing admin tasks by 90%.</li>
+          <li>Conducted regular audits and maintenance to ensure data integrity and compliance.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Technical Consultant</h3>
+        <p class="company">PT Majoo Teknologi Indonesia</p>
+        <p class="date">04/2019 – 09/2019 · Jakarta</p>
+        <ul>
+          <li>Communicated with customers to confirm schedules and provide training/consultation.</li>
+          <li>Provided training on POS application features (Android/Windows/iOS) and Web Based.</li>
+          <li>Conducted bug hunting and software testing.</li>
+          <li>Installed and set up devices: printers, routers, switch hubs, etc.</li>
+          <li>Reported escalations to Customer Care when issues arose.</li>
+          <li>Input daily and monthly work reports into CRM and Gform.</li>
+          <li>Conducted business consultations on Majoo features and participated in weekly team meetings.</li>
+          <li>Engaged in selling add-on features (QRIS, marketplace integration, GrabFood/GoFood, EDC).</li>
+          <li>Trained and mentored junior team members, increasing technical skills and productivity.</li>
+          <li>Exceeded client satisfaction targets by providing timely and effective technical support.</li>
+          <li>Developed and delivered technical presentations and workshops.</li>
+          <li>Collaborated with cross-functional teams to resolve complex technical issues.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>IT Support Freelance</h3>
+        <p class="company">PT Transisi Media Teknologi</p>
+        <ul>
+          <li>Provided comprehensive IT maintenance, both on-site and remotely.</li>
+          <li>Upgraded client PC hardware and software systems.</li>
+          <li>Assembled and configured custom-built PCs tailored to client specifications.</li>
+          <li>Installed and configured routers for seamless WiFi and VoIP/telecommunications.</li>
+          <li>Developed Web System ERP for Production Module using YII Framework.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>IT Support</h3>
+        <p class="company">PT Jari Berkah (JaBe)</p>
+        <ul>
+          <li>Installed and configured operating systems and software for multiple clients.</li>
+          <li>Proactively troubleshot and resolved technical issues, decreasing downtime.</li>
+          <li>Trained and supported end users on new systems and software.</li>
+          <li>Installed and set up CCTV, Network, Wi-Fi, and LAN.</li>
+          <li>Managed and maintained computer networks for clients, ensuring reliable connectivity and secure data storage.</li>
+          <li>Identified and implemented cost-effective solutions, resulting in lower IT expenses.</li>
+          <li>Computer/hardware repair and servicing.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>IT Internship</h3>
+        <p class="company">PT Media Nusantara Citra Tbk (MNC Group)</p>
+        <ul>
+          <li>Technical Writer: Wrote program guidelines and archived web documentation.</li>
+          <li>Design/Dev: Designed logo, icon, submenu in website STKIPMNC; installation Plug-in; testing.web.</li>
+          <li>QC Application: Tested apps/programs and made reports to leader.</li>
+          <li>IT Support: Troubleshooting software and hardware.</li>
+          <li>Flutter/Android Dev: Made submenu and adjusted icon in RCTI+.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>System Analyst / Business Analyst</h4>
+          <p class="level">Proficient</p>
+          <p>Business process analysis, gap analysis, technical documentation, stakeholder engagement.</p>
+        </div>
+        <div class="skill-card">
+          <h4>IT Consultant & Implementor</h4>
+          <p class="level">Proficient</p>
+          <p>Full-cycle system implementation, customization, training, post-deployment support.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Database Management</h4>
+          <p class="level">Proficient</p>
+          <p>SQL, database operations, data integrity, troubleshooting, performance reporting.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Software Tester</h4>
+          <p class="level">Proficient</p>
+          <p>SIT, UAT, bug tracking, code review, API testing, quality assurance.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Integration Analyst & Tester</h4>
+          <p class="level">Proficient</p>
+          <p>API specifications, data mapping, system integration testing.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Documentation Management</h4>
+          <p class="level">Expert</p>
+          <p>User manuals, technical support docs, process flow diagrams, data schemas.</p>
+        </div>
+        <div class="skill-card">
+          <h4>IT Support</h4>
+          <p class="level">Proficient</p>
+          <p>Hardware, software, CCTV, server, networking, Office 365, Linux/Windows server.</p>
+        </div>
+        <div class="skill-card">
+          <h4>IT Trainer</h4>
+          <p class="level">Proficient</p>
+          <p>Hardware & software training, end-user adoption, workshops, presentations.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Web Developer</h4>
+          <p class="level">Competent</p>
+          <p>Java, Go Lang, HTML, PHP, Flutter, YII Framework.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Bachelor in Computer Science (B.Comp.Sc.)</h3>
+        <p class="company">Pelita Bangsa University</p>
+        <p class="date">2016 – 2021 · GPA: 3.44</p>
+        <p>Teknik Informatika</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Khunaify Syarief Yasah. All rights reserved.</p>
+      <p>Built with ❤️ on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
